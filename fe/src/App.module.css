@@ -1,0 +1,49 @@
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000; /* Sfondo nero */
+  color: #fff; /* Testo bianco */
+}
+
+h1 {
+  color: #4caf50; /* Verde brillante per i titoli */
+}
+
+.appContainer {
+  display: flex;
+  height: 100vh;
+  background-color: #1f1f1f;
+}
+
+.navbarContainer {
+  height: 50px; /* Altezza fissa per la navbar */
+  z-index: 10; /* Per garantire che la navbar sia sopra */
+  position: relative; /* Posizionamento relativo per il layering */
+}
+
+.sidebar {
+  width: 200px; /* Larghezza fissa per la sidebar */
+  height: 100vh; /* Altezza fissa per coprire tutta la viewport */
+  background-color: #444; /* Colore di sfondo */
+  position: fixed; /* Fissa la sidebar */
+  z-index: 5; /* Assicurati che la sidebar sia sotto la navbar */
+}
+
+.main-content {
+  margin-left: 300px; /* Spazio per la sidebar */
+  padding: 20px;
+  height: calc(100vh - 100px); /* Altezza della navbar */
+  overflow-y: auto; /* Permette lo scroll se il contenuto è troppo lungo */
+  display: flex; /* Usa flexbox */
+  justify-content: center; /* Centra orizzontalmente */
+  background-color: #2c2c2c; /* Colore di sfondo per il contenuto */
+  align-items: center;
+}
+
+.container {
+  max-width: 700px; /* Larghezza massima per contenuti centrati */
+  width: 100%; /* Fai in modo che occupi tutto lo spazio disponibile */
+  text-align: center; /* Centra il testo */
+}

@@ -1,0 +1,72 @@
+/* HomeInventory.module.css */
+.container {
+    padding: 20px;
+    background-color: #2c2c2c; /* Sfondo scuro per la pagina */
+    color: white;
+    border-radius: 8px; /* Angoli arrotondati */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombra per dare profondità */
+  }
+  
+  h1 {
+    font-size: 2.5em; /* Dimensione del titolo */
+    text-align: center; /* Centra il titolo */
+    margin-bottom: 20px; /* Spazio sotto il titolo */
+    color: #4caf50; /* Verde brillante per il titolo principale */
+  }
+  
+  .category {
+    margin-bottom: 30px; /* Spazio tra le categorie */
+    padding: 15px; /* Padding interno */
+    border: 1px solid #444; /* Bordo sottile */
+    border-radius: 8px; /* Angoli arrotondati per la categoria */
+    background-color: #3a3a3a; /* Sfondo leggermente più chiaro */
+  }
+  
+  .category h2 {
+    font-size: 1.8em; /* Dimensione dei sottotitoli delle categorie */
+    margin-bottom: 10px; /* Spazio sotto il sottotitolo */
+    border-bottom: 2px solid #4caf50; /* Sottolinea il titolo della categoria */
+  }
+  
+  .productItem {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #444; /* Bordo sottile */
+    border-radius: 5px; /* Angoli arrotondati */
+    margin-bottom: 10px;
+    background-color: #5a5a5a; /* Sfondo per ogni prodotto */
+    transition: background-color 0.3s; /* Transizione per l'effetto hover */
+  }
+  
+  .productItem:hover {
+    background-color: #6a6a6a; /* Colore più chiaro al passaggio del mouse */
+  }
+  
+  .productItem input {
+    margin-right: 10px; /* Spazio tra checkbox e testo */
+    accent-color: #4caf50; /* Colore personalizzato per il checkbox */
+  }
+  
+  button {
+    margin-top: 10px;
+    background-color: #ff4444; /* Rosso per il pulsante di eliminazione */
+    color: white;
+    border: none;
+    padding: 10px 20px; /* Padding più grande per il pulsante */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em; /* Dimensione del testo del pulsante */
+    transition: background-color 0.3s, transform 0.2s; /* Transizioni per l'effetto hover */
+  }
+  
+  button:hover {
+    background-color: #ff2222; /* Colore più scuro al passaggio del mouse */
+    transform: translateY(-2px); /* Leggero sollevamento al passaggio del mouse */
+  }
+  
+  button:disabled {
+    background-color: #555; /* Colore grigio per il pulsante disabilitato */
+    cursor: not-allowed; /* Cambia il cursore quando è disabilitato */
+  }
+  

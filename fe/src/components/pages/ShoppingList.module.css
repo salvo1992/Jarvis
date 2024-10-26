@@ -1,0 +1,88 @@
+.container {
+    padding: 40px;
+    background-color: #2c2c2c; /* Sfondo più scuro per il contenitore */
+    border-radius: 8px; /* Angoli arrotondati */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Maggiore spaziatura tra gli elementi */
+
+    
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    color: #4caf50; /* Verde brillante per il titolo */
+    text-align: center; /* Centra il titolo */
+  }
+  
+ 
+  input[type="text"],
+  input[type="date"],
+  textarea,
+  select {
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px; /* Angoli arrotondati */
+    outline: none; /* Rimuove il bordo dell'input */
+    font-size: 16px; /* Dimensione del testo */
+    background-color: #fff; /* Sfondo bianco per input e textarea */
+    color: #333; /* Testo scuro per input */
+    transition: border-color 0.3s; /* Transizione per il focus */
+  }
+  
+  input[type="text"]:focus,
+  input[type="date"]:focus,
+  textarea:focus,
+  select:focus {
+    border: 1px solid #4caf50; /* Colore del bordo al focus */
+  }
+  
+  textarea {
+    resize: none; /* Impedisce il ridimensionamento della textarea */
+  }
+  
+  .productList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .productList li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px; /* Padding maggiore per le righe della lista */
+    margin: 10px 0; /* Margine verticale tra gli elementi */
+    border-radius: 5px; /* Angoli arrotondati */
+    transition: background-color 0.3s; /* Transizione per l'hover */
+  }
+  
+  .productList li:hover {
+    background-color: #666; /* Colore di sfondo al passaggio del mouse */
+  }
+  
+  .purchased {
+    text-decoration: line-through;
+    color: gray;
+  }
+  
+  .actions {
+    margin-bottom: 20px;
+  }
+  
+  .moveButton {
+    background-color: #4caf50; /* Verde per il pulsante */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Transizione per hover e click */
+  }
+  
+  .moveButton:hover {
+    background-color: #45a049; /* Colore al passaggio del mouse */
+    transform: scale(1.05); /* Leggera animazione al passaggio del mouse */
+  }
+  
+  

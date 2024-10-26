@@ -1,0 +1,87 @@
+/* src/components/common/Sidebar.module.css */
+
+.sidebar {
+    position: fixed;
+    top: 70px; /* Altezza della Navbar per non sovrapporsi */
+    left: 0;
+    width: 250px;
+    height: calc(100vh - 50px); /* Altezza dell’intera finestra meno la Navbar */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease; /* Animazione per apertura e chiusura */
+    transform: translateX(-100%); /* Chiusa di default */
+    z-index: 100; /* Assicurati che la sidebar sia sopra il contenuto */
+  }
+  
+  .sidebar.open {
+    transform: translateX(0); /* Apertura della sidebar */
+  }
+  
+  .sidebar.closed {
+    transform: translateX(-200px); /* Mostra solo una parte della sidebar */
+  }
+  
+  .sideLinks {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .sideItem {
+    color: #ffffff;
+    font-size: 18px;
+    padding: 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .sideItem a {
+    text-decoration: none;
+    color: inherit; /* Utilizza il colore del genitore */
+  }
+  
+  .sideItem:hover {
+    background-color: #4caf50; /* Verde brillante al passaggio del mouse */
+    color: #000; /* Contrasto con sfondo verde */
+  }
+  
+  .toggleButton {
+    position: absolute; /* Posizione assoluta per posizionare il pulsante */
+    top: 50%; /* Centrato verticalmente */
+    left: 80%; /* Appena all'esterno della sidebar */
+    transform: translateY(-50%); /* Centra verticalmente */
+    width: 30px;
+    height: 30px;
+    background-color: #4caf50; /* Colore del pulsante */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .toggleButton:hover {
+    background-color: #3e8e41; /* Colore più scuro al passaggio del mouse */
+  }
+  
+  .toggleButton::before {
+    content: '';
+    display: inline-block;
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid #ffffff; /* Freccia per apertura */
+    transform: translateY(0);
+  }
+  
+  .toggleButton.closed::before {
+    border-top: none; /* Rimuovi la freccia per la chiusura */
+    border-bottom: 10px solid #ffffff; /* Freccia per chiusura */
+  }
+  

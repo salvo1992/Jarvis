@@ -1,0 +1,45 @@
+/* src/components/common/Navbar.module.css */
+
+.navbar {
+    position: fixed; /* Fissa la navbar nella parte superiore */
+    top: 0; /* Posiziona la navbar in alto */
+    left: 0; /* Inizia dalla sinistra */
+    right: 0; /* Estendi fino a destra */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333; /* Cambia il colore di sfondo */
+    padding: 10px 20px;
+    z-index: 1000; /* Assicura che la navbar sia sopra gli altri elementi */
+}
+h1{
+    color: #4caf50;
+    margin-left: 60px;
+
+}
+
+.logo {
+    font-size: 1.5em;
+    margin-right: 20px;
+}
+
+.navLinks {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navItem {
+    margin-left: 20px; /* Distanza tra i link */
+}
+
+.link {
+    color: #fff; /* Colore del testo */
+    text-decoration: none; /* Rimuove la sottolineatura */
+    transition: color 0.3s ease; /* Transizione per l'hover */
+}
+
+.link:hover {
+    color: #4caf50; /* Colore al passaggio del mouse */
+}
