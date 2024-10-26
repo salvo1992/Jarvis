@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import styles from './ShoppingList.module.css';
+import axios from 'axios';
 
 const ShoppingList = () => {
   const [products, setProducts] = useState([]);
   const [productName, setProductName] = useState('');
   const [expiryDate, setExpiryDate] = useState('');
-  const [category, setCategory] = useState('fridge'); // Valore predefinito
+  const [category, setCategory] = useState('fridge');
   const [description, setDescription] = useState('');
 
   // Recupera la lista della spesa dal localStorage
@@ -38,42 +39,30 @@ const ShoppingList = () => {
     setDescription('');
   };
 
-  // Sposta i prodotti selezionati nell'inventario
-  const handleMoveToInventory = () => {
+  // Invia i prodotti selezionati al backend
+  const handlePurchase = async () => {
     const purchasedProducts = products.filter(product => product.checked);
-    
-    // Recupera l'inventario esistente dal localStorage
-    const storedInventory = JSON.parse(localStorage.getItem('inventory')) || {
-      fridge: [],
-      freezer: [],
-      beverage: [],
-      cleaning: [],
-      sweets: [],
-      savory: [],
-      fruit: [],
-    };
 
-    // Aggiungi i prodotti acquistati all'inventario
-    purchasedProducts.forEach(product => {
-      const category = product.category; // Assicurati che 'category' sia presente in ogni prodotto
-      if (!storedInventory[category]) storedInventory[category] = [];
-      storedInventory[category].push(product);
-    });
+    try {
+      // Esegue una richiesta POST per ogni prodotto acquistato
+      for (const product of purchasedProducts) {
+        await axios.post(`${process.env.REACT_APP_SERVER_BASE_URL}/Items/create`, {
+          itemId: product.id, // Usa un ID univoco, se disponibile
+          name: product.name,
+          category: product.category,
+          description: product.description,
+          expiryDate: product.expiryDate,
+          pubDate: new Date().toISOString(), // Data corrente
+        });
+      }
 
-    // Salva l'inventario aggiornato nel localStorage
-    localStorage.setItem('inventory', JSON.stringify(storedInventory));
-
-    // Rimuovi i prodotti acquistati dalla lista di acquisto
-    const updatedProducts = products.filter(product => !product.checked);
-    setProducts(updatedProducts);
-    saveProducts(updatedProducts); // Salva i prodotti aggiornati nel localStorage
-  };
-
-  // Elimina i prodotti selezionati dalla lista
-  const handleDeleteSelected = () => {
-    const updatedProducts = products.filter(product => !product.checked);
-    setProducts(updatedProducts);
-    saveProducts(updatedProducts); // Salva i prodotti aggiornati nel localStorage
+      // Rimuove i prodotti acquistati dalla lista di acquisto
+      const updatedProducts = products.filter(product => !product.checked);
+      setProducts(updatedProducts);
+      saveProducts(updatedProducts); // Salva i prodotti aggiornati nel localStorage
+    } catch (error) {
+      console.error("Errore nell'invio dei prodotti al backend", error);
+    }
   };
 
   // Usa useEffect per caricare i prodotti quando il componente viene montato
@@ -117,8 +106,7 @@ const ShoppingList = () => {
       </form>
 
       <div className={styles.buttonContainer}>
-        <button onClick={handleDeleteSelected}>Cancella Selezionati</button>
-        <button onClick={handleMoveToInventory}>Segna come Acquistato</button>
+        <button onClick={handlePurchase}>Segna come Acquistato</button>
       </div>
 
       <ol>
