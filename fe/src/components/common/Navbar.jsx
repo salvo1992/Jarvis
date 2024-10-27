@@ -19,7 +19,7 @@ const Navbar = () => {
           <Link to="/recipes" className={styles.link}>Recipes</Link>
         </li>
         <li className={styles.navItem}>
-          <Link to="/calendar" className={styles.link}>Calendar</Link>
+          <Link to="/PersonalDietPlanner" className={styles.link}>PersonalDietPlanner</Link>
         </li>
         <li className={styles.navItem}>
           <Link to="/account" className={styles.link}>Account</Link>

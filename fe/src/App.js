@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/common/Navbar';
 import Sidebar from './components/common/Sidebar';
 import Assistant from './components/pages/Assistant';
-import Calendar from './components/pages/Calendar';
+import PersonalDietPlanner from './components/pages/PersonalDietPlanner';
 import Notes from './components/pages/Notes';
 import Recipes from './components/pages/Recipes';
 import ShoppingList from './components/pages/ShoppingList';
@@ -26,7 +26,7 @@ const App = () => {
             <div className={styles.container}>
               <Routes>
                 <Route path="/" element={<Assistant />} />
-                <Route path="/calendar" element={<Calendar />} />
+                <Route path="/PersonalDietPlanner" element={<PersonalDietPlanner />} />
                 <Route path="/notes" element={<Notes />} />
                 <Route path="/recipes" element={<Recipes />} />
                 <Route path="/shopping-list" element={<ShoppingList />} />

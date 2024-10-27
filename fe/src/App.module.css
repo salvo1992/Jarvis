@@ -1,7 +1,7 @@
 
 
 body {
-  margin: 0;
+ 
   font-family: Arial, sans-serif;
   background-color: #000; /* Sfondo nero */
   color: #fff; /* Testo bianco */
@@ -32,9 +32,9 @@ h1 {
 }
 
 .main-content {
-  margin-left: 300px; /* Spazio per la sidebar */
-  padding: 20px;
-  height: calc(100vh - 100px); /* Altezza della navbar */
+  margin-left: 160px; /* Spazio per la sidebar */
+  padding: 60px;
+ 
   overflow-y: auto; /* Permette lo scroll se il contenuto è troppo lungo */
   display: flex; /* Usa flexbox */
   justify-content: center; /* Centra orizzontalmente */
@@ -43,7 +43,6 @@ h1 {
 }
 
 .container {
-  max-width: 700px; /* Larghezza massima per contenuti centrati */
-  width: 100%; /* Fai in modo che occupi tutto lo spazio disponibile */
+  
   text-align: center; /* Centra il testo */
 }

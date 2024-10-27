@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './ShoppingList.module.css';
 import axios from 'axios';
+import { v4 as uuidv4 } from 'uuid';
 
 const ShoppingList = () => {
   const [products, setProducts] = useState([]);
@@ -42,28 +43,38 @@ const ShoppingList = () => {
   // Invia i prodotti selezionati al backend
   const handlePurchase = async () => {
     const purchasedProducts = products.filter(product => product.checked);
-
+  
     try {
-      // Esegue una richiesta POST per ogni prodotto acquistato
       for (const product of purchasedProducts) {
-        await axios.post(`${process.env.REACT_APP_SERVER_BASE_URL}/Items/create`, {
-          itemId: product.id, // Usa un ID univoco, se disponibile
+        // Aggiungi un log per verificare il prodotto prima dell'invio
+        console.log('Payload da inviare:', {
+          itemId: product.id || 'default-id', // Assicurati che ci sia un ID
           name: product.name,
           category: product.category,
           description: product.description,
           expiryDate: product.expiryDate,
-          pubDate: new Date().toISOString(), // Data corrente
+          pubDate: new Date().toISOString(),
+        });
+  
+        await axios.post(`${process.env.REACT_APP_SERVER_BASE_URL}/Items/create`, {
+          itemId: product.id || uuidv4(), // Genera un ID univoco se non esiste
+          name: product.name,
+          category: product.category,
+          description: product.description || '',
+          expiryDate: product.expiryDate ? new Date(product.expiryDate).toISOString() : null,
+          pubDate: new Date().toISOString(),
         });
       }
-
-      // Rimuove i prodotti acquistati dalla lista di acquisto
+  
       const updatedProducts = products.filter(product => !product.checked);
       setProducts(updatedProducts);
-      saveProducts(updatedProducts); // Salva i prodotti aggiornati nel localStorage
+      saveProducts(updatedProducts);
     } catch (error) {
       console.error("Errore nell'invio dei prodotti al backend", error);
     }
   };
+  
+  
 
   // Usa useEffect per caricare i prodotti quando il componente viene montato
   useEffect(() => {

@@ -1,0 +1,120 @@
+/* Stile per il contenitore principale della pagina Recipes */
+.recipesContainer {
+  padding: 43px; /* Aggiunge un po' di padding */
+  background-color: #f4f4f4; /* Colore di sfondo chiaro per la pagina */
+  border-radius: 8px; /* Bordo arrotondato */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombra leggera per un effetto di profondità */
+}
+
+/* Stile per il titolo principale */
+.recipesTitle {
+  text-align: center; /* Centra il titolo principale */
+  color: #333; /* Colore del testo */
+  margin-bottom: 20px; /* Spazio sotto il titolo */
+}
+
+/* Stile per i titoli secondari */
+.recipesSubtitle {
+  margin-top: 20px; /* Spazio sopra i titoli secondari */
+  color: #444; /* Colore del testo dei sottotitoli */
+}
+
+/* Stile per i campi di input e textarea */
+.recipesInput,
+.recipesTextarea {
+  width: 100%; /* Occupa tutta la larghezza disponibile */
+  padding: 10px; /* Padding interno */
+  margin: 10px 0; /* Margine sopra e sotto */
+  border: 1px solid #ccc; /* Bordo grigio chiaro */
+  border-radius: 4px; /* Bordo arrotondato */
+  font-size: 16px; /* Dimensione del font */
+}
+
+/* Stile per il bottone */
+.recipesButton {
+  padding: 10px 15px; /* Padding interno per il bottone */
+  margin-top: 10px; /* Margine sopra il bottone */
+  background-color: #007bff; /* Colore di sfondo blu */
+  color: white; /* Colore del testo bianco */
+  border: none; /* Rimuove il bordo */
+  border-radius: 4px; /* Bordo arrotondato */
+  cursor: pointer; /* Cambia il cursore in una mano */
+  font-size: 16px; /* Dimensione del font */
+  transition: background-color 0.3s; /* Effetto di transizione */
+}
+
+/* Cambia il colore di sfondo del bottone al passaggio del mouse */
+.recipesButton:hover {
+  background-color: #0056b3; /* Colore blu scuro al passaggio del mouse */
+}
+
+/* Stile per l'elenco delle ricette */
+.recipesList {
+  list-style-type: none; /* Rimuove i puntini dall'elenco */
+  padding: 0; /* Rimuove il padding predefinito */
+}
+
+/* Stile per ciascun elemento della lista delle ricette */
+.recipesListItem {
+  background-color: #fff; /* Colore di sfondo bianco per gli elementi della lista */
+  margin: 10px 0; /* Margine sopra e sotto gli elementi */
+  padding: 15px; /* Padding interno */
+  border: 1px solid #ddd; /* Bordo grigio chiaro */
+  border-radius: 4px; /* Bordo arrotondato */
+  transition: box-shadow 0.2s; /* Transizione per l'ombra */
+}
+
+/* Aggiunge un'ombra leggera al passaggio del mouse sugli elementi della lista */
+.recipesListItem:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombra più marcata al passaggio del mouse */
+}
+
+/* Stile per le immagini delle ricette */
+.recipesImage {
+  max-width: 100%; /* Limita la larghezza massima delle immagini */
+  height: auto; /* Mantiene il rapporto di aspetto */
+  border-radius: 4px; /* Bordo arrotondato per le immagini */
+}
+
+/* Stile per i link alle ricette */
+.recipesLink {
+  color: #007bff; /* Colore dei link */
+  text-decoration: none; /* Rimuove la sottolineatura */
+}
+
+.recipesLink:hover {
+  text-decoration: underline; /* Sottolinea il link al passaggio del mouse */
+}
+
+/* Stile per il modal */
+.modal {
+  display: flex;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Sfondo scuro trasparente */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Stile per il contenuto del modal */
+.modalContent {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px; /* Bordo arrotondato per il contenuto del modal */
+  width: 80%;
+  max-width: 600px; /* Limita la larghezza massima del modal */
+  position: relative;
+}
+
+/* Stile per il pulsante di chiusura del modal */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer; /* Cambia il cursore in una mano */
+  font-size: 24px; /* Dimensione del font per la chiusura */
+}
