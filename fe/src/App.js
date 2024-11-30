@@ -12,6 +12,10 @@ import Help from './components/pages/Help';
 import Logout from './components/pages/Logout';
 import Settings from './components/pages/Settings';
 import styles from './App.module.css'; // Assicurati di importare il tuo CSS
+import IngredientsPage from './components/ingrdients/ingredientsPage';
+import AccountPage from './components/pages/AccountPage';
+import ProfilePage from './components/pages/ProfilePage';
+import Home from './components/pages/Home';
 
 const App = () => {
   return (
@@ -25,8 +29,12 @@ const App = () => {
           <main className={styles['main-content']}> {/* Usa le parentesi quadre per il nome con trattino */}
             <div className={styles.container}>
               <Routes>
-                <Route path="/" element={<Assistant />} />
+                <Route path="/" element={<Home/>} />
+                <Route path="/assistant" element={<Assistant />} />
+                <Route path="/login" element={<AccountPage />} /> {/* Aggiungi la nuova pagina */}
+                <Route path="/profile" element={<ProfilePage />} /> {/* Aggiungi la nuova pagina */}
                 <Route path="/PersonalDietPlanner" element={<PersonalDietPlanner />} />
+                <Route path="/IngredientsPage" element={<IngredientsPage />} /> {/* Aggiungi la nuova pagina */}
                 <Route path="/notes" element={<Notes />} />
                 <Route path="/recipes" element={<Recipes />} />
                 <Route path="/shopping-list" element={<ShoppingList />} />

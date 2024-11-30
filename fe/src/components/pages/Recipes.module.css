@@ -111,10 +111,9 @@
 }
 
 /* Stile per il pulsante di chiusura del modal */
+
 .close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  cursor: pointer; /* Cambia il cursore in una mano */
-  font-size: 24px; /* Dimensione del font per la chiusura */
+  color: red; /* Rende la "x" di colore rosso */
+  font-size: 24px; /* Aumenta la dimensione della "x" */
+  cursor: pointer; /* Cambia il cursore a "mano" */
 }

@@ -1,0 +1,123 @@
+[
+    {
+      "name": "Farina",
+      "category": "Cereali",
+      "description": "Polvere fine ottenuta dalla macinazione dei cereali.",
+      "unit": "kg",
+      "origin": "Italia",
+      "allergens": ["Glutine"]
+    },
+    {
+      "name": "Zucchero",
+      "category": "Dolcificanti",
+      "description": "Sostanza dolce ricavata dalla canna da zucchero o dalla barbabietola.",
+      "unit": "g",
+      "origin": "Global",
+      "allergens": []
+    },
+    {
+      "name": "Sale",
+      "category": "Condimenti",
+      "description": "Cristalli bianchi utilizzati per insaporire i cibi.",
+      "unit": "g",
+      "origin": "Global",
+      "allergens": []
+    },
+    {
+      "name": "Acqua",
+      "category": "Liquidi",
+      "description": "Liquido incolore e insapore essenziale per la vita.",
+      "unit": "l",
+      "origin": "Global",
+      "allergens": []
+    },
+    {
+      "name": "Olio d'oliva",
+      "category": "Grassi",
+      "description": "Olio estratto dai frutti dell'olivo, usato per cucinare o condire.",
+      "unit": "ml",
+      "origin": "Mediterraneo",
+      "allergens": []
+    },
+    {
+      "name": "Pomodoro",
+      "category": "Verdura",
+      "description": "Frutto della pianta Solanum lycopersicum, utilizzato in cucina in molte preparazioni.",
+      "unit": "g",
+      "origin": "Global",
+      "allergens": []
+    },
+    {
+      "name": "Aglio",
+      "category": "Spezie",
+      "description": "Bulbo di una pianta della famiglia delle Liliacee, utilizzato come aroma e condimento.",
+      "unit": "g",
+      "origin": "Asia centrale",
+      "allergens": []
+    },
+    {
+      "name": "Basilico",
+      "category": "Erbe",
+      "description": "Pianta aromatico-culinaria, dalle foglie verde brillante, utilizzata in molte cucine, specialmente in quella italiana.",
+      "unit": "g",
+      "origin": "Mediterraneo",
+      "allergens": []
+    },
+    {
+      "name": "Pollo",
+      "category": "Carne",
+      "description": "Carne proveniente dall'animale gallina, ricca di proteine.",
+      "unit": "g",
+      "origin": "Global",
+      "allergens": []
+    },
+    {
+      "name": "Uovo",
+      "category": "Alimenti di origine animale",
+      "description": "Uovo di gallina, utilizzato come ingrediente in numerose ricette.",
+      "unit": "pezzo",
+      "origin": "Global",
+      "allergens": ["Uovo"]
+    },
+    {
+      "name": "Miele",
+      "category": "Dolcificanti",
+      "description": "Liquido dolce prodotto dalle api a partire dal nettare dei fiori.",
+      "unit": "g",
+      "origin": "Global",
+      "allergens": ["Pollen"]
+    },
+    {
+      "name": "Latte",
+      "category": "Latticini",
+      "description": "Liquido prodotto dalle ghiandole mammarie degli animali, principalmente utilizzato nei latticini.",
+      "unit": "l",
+      "origin": "Global",
+      "allergens": ["Lattosio"]
+    },
+    {
+      "name": "Riso",
+      "category": "Cereali",
+      "description": "Cereale utilizzato in molte cucine, specialmente in Asia.",
+      "unit": "g",
+      "origin": "Asia",
+      "allergens": []
+    },
+    {
+      "name": "Pesce",
+      "category": "Carne",
+      "description": "Alimenti provenienti da creature acquatiche, ricchi di proteine e omega-3.",
+      "unit": "g",
+      "origin": "Global",
+      "allergens": ["Pesce"]
+    },
+    {
+      "name": "Zenzero",
+      "category": "Spezie",
+      "description": "Radice di una pianta erbacea, usata come spezia per il suo sapore piccante e aromatico.",
+      "unit": "g",
+      "origin": "Asia",
+      "allergens": []
+    }
+  ]
+  

@@ -108,17 +108,38 @@ const Recipes = () => {
       </ul>
 
       {/* Modal per i dettagli della ricetta */}
-      {isModalOpen && selectedRecipe && (
-        <div className={styles.modal}>
-          <div className={styles.modalContent}>
-            <span className={styles.close} onClick={closeModal}>&times;</span>
-            <h2>{selectedRecipe.title}</h2>
-            <img className={styles.recipesImage} src={`https://spoonacular.com/recipeImages/${selectedRecipe.id}-312x231.jpg`} alt={selectedRecipe.title} />
-            <a className={styles.recipesLink} href={selectedRecipe.sourceUrl} target="_blank" rel="noopener noreferrer">Visualizza Ricetta</a>
-            {/* Aggiungi ulteriori dettagli della ricetta qui */}
-          </div>
-        </div>
-      )}
+      {isModalOpen && selectedRecipe && ( 
+  <div className={styles.modal}>
+    <div className={styles.modalContent}>
+      {/* Bottone per chiudere il modale, ora con una "x" rossa */}
+      <span 
+        className={styles.close} 
+        onClick={closeModal} 
+        role="button" 
+        tabIndex="0"
+        style={{ color: 'red', fontSize: '24px', cursor: 'pointer' }}
+      >
+        &times;
+      </span>
+      <h2>{selectedRecipe.title}</h2>
+      <img 
+        className={styles.recipesImage} 
+        src={`https://spoonacular.com/recipeImages/${selectedRecipe.id}-312x231.jpg`} 
+        alt={selectedRecipe.title} 
+      />
+      <a 
+        className={styles.recipesLink} 
+        href={selectedRecipe.sourceUrl} 
+        target="_blank" 
+        rel="noopener noreferrer"
+      >
+        Visualizza Ricetta
+      </a>
+      {/* Aggiungi ulteriori dettagli della ricetta qui */}
+    </div>
+  </div>
+)}
+
     </div>
   );
 };

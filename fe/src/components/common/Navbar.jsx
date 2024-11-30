@@ -16,13 +16,16 @@ const Navbar = () => {
           <Link to="/assistant" className={styles.link}>Assistant</Link>
         </li>
         <li className={styles.navItem}>
+          <Link to="/IngredientsPage" className={styles.link}>Ingredients</Link>
+        </li>
+        <li className={styles.navItem}>
           <Link to="/recipes" className={styles.link}>Recipes</Link>
         </li>
         <li className={styles.navItem}>
           <Link to="/PersonalDietPlanner" className={styles.link}>PersonalDietPlanner</Link>
         </li>
         <li className={styles.navItem}>
-          <Link to="/account" className={styles.link}>Account</Link>
+          <Link to="/AccountPage" className={styles.link}>Account</Link>
         </li>
         <li className={styles.navItem}>
           <Link to="/settings" className={styles.link}>Settings</Link>
