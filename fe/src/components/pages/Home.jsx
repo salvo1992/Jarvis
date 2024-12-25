@@ -1,15 +1,18 @@
 import React from 'react';
 import styles from './Home.module.css';
-import inventoryImage from '../assets/inventory.jpg';
-import recipesImage from '../assets/recipes.jpg';
-import shoppingImage from '../assets/shopping.jpg';
-import chatbotImage from '../assets/chatbot.jpg';
+import inventoryImage from '../../assets/inventory.jpg';
+import recipesImage from '../../assets/recipes.jpg';
+import shoppingImage from '../../assets/shopping.jpg';
+import chatbotImage from '../../assets/chatbot.jpg';
+import recipesImageBook from '../../assets/recipesImageBook.jpg';
+import DietpersonalPlannerImage from '../../assets/DietpersonalPlannerImage.jpg';
 
 const Home = () => {
   return (
     <div className={styles.homeContainer}>
       <header className={styles.header}>
-        <h1>Benvenuti nella nostra App di Ricette e Inventario</h1>
+        <h1>Benvenuti in  JARVIS </h1>
+        <h2>L'APP  di Ricette  Inventario e intelligenza artificiale</h2>
         <p>
           Organizza la tua cucina in modo intelligente! Con questa app, puoi
           gestire la tua lista della spesa, tenere sotto controllo l'inventario
@@ -41,6 +44,15 @@ const Home = () => {
             </p>
           </div>
         </div>
+        <div className={styles.card}>
+          <img src={recipesImageBook} alt="libro delle ricette" className={styles.image} />
+          <div className={styles.cardContent}>
+            <h2>libro delle ricette </h2>
+            <p>
+            Inserisci le tue ricette e conservale qui a portata di mano cosi da non perderle mai 
+            </p>
+          </div>
+        </div>
 
         <div className={styles.card}>
           <img src={shoppingImage} alt="Lista della Spesa" className={styles.image} />
@@ -49,6 +61,17 @@ const Home = () => {
             <p>
               Pianifica facilmente la tua spesa settimanale. Dividi gli articoli
               per categoria e supermercato per rendere lo shopping più efficiente.
+            </p>
+          </div>
+        </div>
+
+        <div className={styles.card}>
+          <img src={DietpersonalPlannerImage} alt="PersonalDietPlanner" className={styles.image} />
+          <div className={styles.cardContent}>
+            <h2>personalizza la tua dieta </h2>
+            <p>
+              Pianifica facilmente la tua dieta  esegui il calcolo e scopri come potrai 
+              perdere peso in maniera facile e smart 
             </p>
           </div>
         </div>

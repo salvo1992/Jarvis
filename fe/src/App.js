@@ -16,6 +16,7 @@ import IngredientsPage from './components/ingrdients/ingredientsPage';
 import AccountPage from './components/pages/AccountPage';
 import ProfilePage from './components/pages/ProfilePage';
 import Home from './components/pages/Home';
+import RecipeBook from './components/pages/RecipeBook';
 
 const App = () => {
   return (
@@ -37,6 +38,7 @@ const App = () => {
                 <Route path="/IngredientsPage" element={<IngredientsPage />} /> {/* Aggiungi la nuova pagina */}
                 <Route path="/notes" element={<Notes />} />
                 <Route path="/recipes" element={<Recipes />} />
+                <Route path="/RecipeBook" element={<RecipeBook />} />
                 <Route path="/shopping-list" element={<ShoppingList />} />
                 <Route path="/home-inventory" element={<HomeInventory />} />
                 <Route path="/help" element={<Help />} />
